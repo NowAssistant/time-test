@@ -1,0 +1,78 @@
+contentType: Card
+title: Action Test Time Service
+name: a-tts
+CollectionModeField:
+  CollectionMode: 0
+MaxItemsField:
+  MaxItems: 3
+PriorityField:
+  Priority: 5
+StreamSource: null
+CardComponent: a-tts/a-tts-card
+StoreMetadataField:
+  description: 
+  logourl: 
+  storehide: !!bool false
+  disableWorkplace: !!bool false
+CommonPart:
+  Owner: !!int 2
+  Container: null
+  CreatedUtc: 2018-04-15T14:56:10.0819037Z
+  PublishedUtc: 2018-04-15T16:24:16.5614958Z
+  ModifiedUtc: 2018-04-15T16:24:16.3169106Z
+  VersionCreatedUtc: 2018-04-15T16:24:16.0000000
+  VersionPublishedUtc: 2018-04-15T16:24:16.0000000
+  VersionModifiedUtc: 2018-04-15T16:24:16.0000000
+ServicePart:
+  ConnectorTypeName: ScriptConnector
+  ConnectorTypeId: !!int 401
+  ConnectorName: tts
+  ServiceName: time
+  Url: ~/api/adenin.GateKeeper.Connector/tts/time/{url}
+  ServiceParameters: '{"url":""}'
+SearchContextPart:
+  Query: null
+  Interface: null
+CommandPart:
+  CommandType: Utterances
+  Command: |+
+    what is the time?
+
+    what's the time?
+
+    wie spät ist es?
+
+  DefaultDate: null
+  Intent: null
+  Ext: {}
+AppPart:
+  App: null
+  Url: 
+  ExtUrl: 
+  Priority: !!int 0
+  AppFaceId: !!int 0
+  Category: orange
+  Icon: now:search
+  CSSClasses: null
+  Enabled: !!bool false
+  NewWindow: !!bool false
+  UrlWithId: !!bool true
+  AvailableAppFaceRecords: null
+  HasPattern: !!bool false
+RoleViewPermissionsPart:
+  AllowedRoles:
+    - Authenticated
+  Audiences: []
+  Mandatory: False
+RecurringTaskPart:
+  Schedule: '*/22 * * * *'
+  ActivityType: adenin.Now.Activities.CardTask.UpdateCard
+  StartDateUtc: null
+  EndDateUtc: null
+  NextOccurrenceUtc: 2018-04-25T15:21:17.0000000
+  Priority: !!int 5
+  Status: Enabled
+  NowFlag: 0
+  LastExecutionUTC: 2018-04-25T14:59:17.0000000
+  EnableWebHook: !!bool false
+  WebHookToken: null

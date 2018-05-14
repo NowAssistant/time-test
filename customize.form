@@ -1,0 +1,27 @@
+$type: form
+properties:
+  counter:
+    type: number
+    title: Counter
+    name: counter
+  tz:
+    type: string
+    title: Timezone
+    xtype: enum
+    selectedItems: '[object Object]'
+    name: tz
+    xvaluelist:
+      - title: New York
+        value: America/New_York
+      - title: London
+        value: Europe/London
+      - title: Berlin
+        value: Europe/Berlin
+    default: America/New_York
+  toggle3:
+    type: boolean
+    title: Toggle 3
+    xtype: toggle
+    default: false
+$meta: {}
+rules: []

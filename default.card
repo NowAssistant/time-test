@@ -1,0 +1,85 @@
+$type: card
+rules: []
+properties:
+  title:
+    type: element
+    xtype: at-carbon-card-title
+    title: title
+    xgridcols: 12
+    xstyle: 
+    xclass: 
+    actionListeners:
+      - _start
+    customizable: !!bool true
+  content:
+    type: element
+    xtype: at-core-view
+    model: 
+    view: |-
+      <div class="layout-horizontal layout-center-center">
+        <div class="font-display1">{{time}}</div>
+      </div>
+      <div class="layout-horizontal layout-center-center">
+        <div class="font-subhead">{{tz | replace: '_', ' '}}</div>
+      </div>
+      <div at-click-action="post" id="{{id}}" class="action">Refresh</div>
+
+      {{_settings.tz}} {{_settings.counter}}
+    xgridcols: 12
+    xstyle: 
+    xclass: m
+    actionListeners:
+      - _all
+    default: 
+    modelRoot: state.model
+  actions3:
+    type: element
+    title: Card Actions 3
+    xtype: at-carbon-card-actions
+    actionListeners:
+      - _all  
+$meta:
+  cardId: 402
+  preview-data: |-
+    {
+      "id": "y2018",
+      "ts": "2018-05-11T07:29:30+02:00",
+      "tsUTC": "2018-05-11T05:29:30Z",
+      "time": "7:29:30 AM",
+      "tz": "Europe/Berlin",
+      "_settings": {
+        "tz": "Europe/Berlin"
+      }
+    }
+  preview-mode: live
+  preview-container: event
+  search-term: 
+  service-url: 
+  xclass: 
+  xstyle: 
+  markdown: The time is {{time}}
+  actionList:
+    - id: utc
+      label: UTC
+      settings:
+        icon: 
+        actionType: a
+        href: 
+        promptType: 0
+        promptForm: 
+    - id: comment
+      label: Comment
+      settings:
+        icon: 
+        actionType: a
+        href: 
+        promptType: 1
+        promptForm: comment.form
+    - id: goog
+      label: Google
+      settings:
+        icon: 
+        actionType: u
+        href: https://www.google.com/search?q=what+time+is+it+in+london
+        promptType: !!int 0
+        promptForm: 

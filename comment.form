@@ -1,0 +1,9 @@
+$type: form
+properties:
+  comment:
+    type: string
+    title: Comment
+    name: comment
+    required: !!bool true
+$meta: {}
+rules: []
