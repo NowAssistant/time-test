@@ -15,16 +15,14 @@ properties:
     type: element
     xtype: at-core-view
     model: 
-    view: |-
+    view: |
       <div class="layout-horizontal layout-center-center">
         <div class="font-display1">{{time}}</div>
       </div>
       <div class="layout-horizontal layout-center-center">
         <div class="font-subhead">{{tz | replace: '_', ' '}}</div>
       </div>
-      <div at-click-action="post" id="{{id}}" class="action">Refresh</div>
-
-      {{_settings.tz}} {{_settings.counter}}
+      <div title="number of requests {{_settings.counter}}" at-click-action="post" id="{{id}}" class="action">Refresh</div>
     xgridcols: 12
     xstyle: 
     xclass: m
@@ -37,18 +35,18 @@ properties:
     title: Card Actions 3
     xtype: at-carbon-card-actions
     actionListeners:
-      - _all  
+      - _all
 $meta:
   cardId: 402
   preview-data: |-
     {
       "id": "y2018",
-      "ts": "2018-05-11T07:29:30+02:00",
-      "tsUTC": "2018-05-11T05:29:30Z",
-      "time": "7:29:30 AM",
-      "tz": "Europe/Berlin",
+      "ts": "2018-05-14T11:14:26-04:00",
+      "tsUTC": "2018-05-14T15:14:26Z",
+      "time": "11:14:26 AM",
+      "tz": "America/New_York",
       "_settings": {
-        "tz": "Europe/Berlin"
+        "counter": 107
       }
     }
   preview-mode: live
@@ -83,3 +81,8 @@ $meta:
         href: https://www.google.com/search?q=what+time+is+it+in+london
         promptType: !!int 0
         promptForm: 
+  code: |2-
+
+    action.initialize = function(evt) {
+      // evt.model
+    }
