@@ -1,6 +1,6 @@
 {
   "name": "a-tts",
-  "version": "0.0.1.51",
+  "version": "0.0.1.54",
   "private": true,
   "dependencies": {
     "polymer": "Polymer/polymer#master"

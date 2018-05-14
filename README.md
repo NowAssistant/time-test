@@ -6,4 +6,4 @@ The card can be used on the desktop and in all supported Bot Connetors (Slack, S
 
 ![Desktop](docs/now-sm.png)
 
-![Slack](docs/slack-mobile-sm.png)
+![Slack](docs/slack-mobile-sm.jpg)
